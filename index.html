@@ -21,7 +21,7 @@
                 code: error.code,
                 message: error.message,
             },
-        });
+        }, null, 2);
     }
 
     navigator.geolocation.watchPosition(updatePosition, showError, {
