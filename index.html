@@ -16,7 +16,12 @@
     }
 
     function showError(error) {
-        document.getElementById('position').innerText = JSON.stringify(error);
+        document.getElementById('position').innerText = JSON.stringify({
+            error: {
+                code: error.code,
+                message: error.message,
+            },
+        });
     }
 
     navigator.geolocation.watchPosition(updatePosition, showError, {
